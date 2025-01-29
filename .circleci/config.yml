@@ -25,5 +25,6 @@ jobs:
 workflows:
   labo_01:
     jobs:
-      - checkoutEtTests
-      - integrationFrontend
+      - integrationFrontend:
+        requires:
+          - checkoutEtTests
