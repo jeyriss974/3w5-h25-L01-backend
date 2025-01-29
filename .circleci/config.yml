@@ -15,10 +15,11 @@ jobs:
       - run:
         command: npm run test
   integrationFrontend:
-    - run:
-      command: |
-        git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
-        git clone https://github.com/jeyriss974/3w5-h25-L01-frontend.git
+    steps:
+      - run:
+        command: |
+          git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
+          git clone https://github.com/jeyriss974/3w5-h25-L01-frontend.git
 
 
 workflows:
