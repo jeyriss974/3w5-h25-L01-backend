@@ -14,7 +14,11 @@ jobs:
       - node/install-packages
       - run:
         command: npm run test
+
   integrationFrontend:
+    executor:
+      name: node/default 
+      tag: '22.9'
     steps:
       - run:
         command: |
