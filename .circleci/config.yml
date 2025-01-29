@@ -1,17 +1,24 @@
 version: 2.1
+
 orbs:
   node: circleci/node@2.9
+
 jobs:
-  test:
+  checkoutEtTests:
     executor:
-      name: node/default
+      name: node/default 
+      tag: '16.13'
     steps:
+      - checkout
       - run:
-          name: cloner, installer dependances et tester
+          name: Installer les dépendances backend
           command: |
-            git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
-            cd 3w5-h25-L01-backend
+            cd 3w5-h25-L01-backend 
             npm install
+      - run:
+          name: Exécuter les tests backend
+          command: |
+            cd 3w5-h25-L01-backend
             npm run test
 
 workflows:
