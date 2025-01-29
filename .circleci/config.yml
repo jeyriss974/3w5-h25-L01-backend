@@ -28,16 +28,8 @@ jobs:
             git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
             git clone https://github.com/jeyriss974/3w5-h25-L01-frontend.git
       - run:
-          command:
-            ls
-      - run:
-          command:
-            cd 3w5-h25-L01-frontend
-      - run:
-          command:
-            ls
-      - run:
           command: |
+            cd 3w5-h25-L01-frontend
             npm install
             npm run build
       - run:
