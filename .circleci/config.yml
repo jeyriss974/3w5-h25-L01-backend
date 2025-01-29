@@ -6,7 +6,7 @@ jobs:
       - image: cimg/node:22.9
     steps:
       - run:
-          name: Installer dépendances
+          name: Cloner
           command:
             git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
       - run:
