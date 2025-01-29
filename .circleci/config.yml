@@ -6,16 +6,10 @@ jobs:
       - image: cimg/node:22.9
     steps:
       - run:
-          name: Cloner
-          command:
+          name: cloner, installer dependances et tester
+          command: |
             git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
-      - run:
-          name: Installer dépendances
-          command:
             npm install
-      - run:
-          name: Exécuter tests
-          command:
             npm run test
 
 workflows:
