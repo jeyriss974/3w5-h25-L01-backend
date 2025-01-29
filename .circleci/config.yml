@@ -13,6 +13,8 @@ jobs:
       - run:
           command:
             cd 3w5-h25-L01-backend
+      - run:
+          command:
             npm install
             npm run test
 
@@ -33,6 +35,15 @@ jobs:
       - run:
           command:
             cd 3w5-h25-L01-backend
+            mkdir -p public
+      - run:
+          command: |
+            cp -r ../3w5-h25-L01-frontend/build/* ./public/
+
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - 3w5-h25-L01-backend/public
 workflows:
   labo_01:
     jobs:
