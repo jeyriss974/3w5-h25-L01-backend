@@ -8,12 +8,12 @@ jobs:
       - checkout
       - run:
           name: Installer dépendances
-          command:
+          command:|
             cd ..
             npm install
       - run:
           name: Exécuter tests
-          command:
+          command:|
             cd ..
             npm run test
 
