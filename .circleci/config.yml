@@ -5,16 +5,17 @@ jobs:
     docker:
       - image: cimg/node:22.9
     steps:
-      - checkout
       - run:
           name: Installer dépendances
-          command: |
-            cd ..
+          command:
+            git clone
+      - run:
+          name: Installer dépendances
+          command:
             npm install
       - run:
           name: Exécuter tests
-          command: |
-            cd ..
+          command:
             npm run test
 
 workflows:
