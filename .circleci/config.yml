@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   checkoutEtTests:
     docker:
-      - image: cimg/node:22.09
+      - image: cimg/node:22.9
     steps:
       - checkout
       - run:
