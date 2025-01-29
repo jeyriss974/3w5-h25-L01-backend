@@ -13,8 +13,6 @@ jobs:
       - run:
           command:
             cd 3w5-h25-L01-backend
-      - run:
-          command:
             npm install
             npm run test
 
@@ -34,13 +32,7 @@ jobs:
             npm run build
       - run:
           command:
-            ls
-      - run:
-          command:
-            cd ./3w5-h25-L01-backend
-      - run:
-          command:
-            ls
+            cd 3w5-h25-L01-backend
 workflows:
   labo_01:
     jobs:
