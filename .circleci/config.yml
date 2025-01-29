@@ -12,8 +12,19 @@ jobs:
       - node/install-packages
       - run:
           command: npm run test
+  integrationFrontend:
+    executor:
+      name: node/default
+      tag: "22.9"
+    steps:
+      - run:
+          command: |
+            git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
+            git clone https://github.com/jeyriss974/3w5-h25-L01-frontend.git
 workflows:
   labo_01:
     jobs:
       - checkoutEtTests
-
+      - integrationFrontend:
+          requires:
+            - checkoutEtTests
