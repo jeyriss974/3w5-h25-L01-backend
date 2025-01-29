@@ -10,14 +10,9 @@ jobs:
       tag: '22.9'
     steps:
       - checkout
+      - node/install-packages
       - run:
-          name: Installer les dépendances backend
-          command:
-            npm install
-      - run:
-          name: Exécuter les tests backend
-          command:
-            npm run test
+          command: npm run test
 
 workflows:
   labo_01:
