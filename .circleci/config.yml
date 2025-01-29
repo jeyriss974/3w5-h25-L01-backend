@@ -36,8 +36,6 @@ jobs:
           command: |
             cd 3w5-h25-L01-backend
             mkdir -p public
-      - run:
-          command: |
             cp -r ../3w5-h25-L01-frontend/build/* ./public/
 
       - persist_to_workspace:
