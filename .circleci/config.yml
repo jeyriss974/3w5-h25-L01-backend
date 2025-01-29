@@ -9,7 +9,8 @@ jobs:
           name: cloner, installer dependances et tester
           command: |
             git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
-            ls -R
+            cd 3w5-h25-L01-backend
+            ls
 
 workflows:
   labo_01:
