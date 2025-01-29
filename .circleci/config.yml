@@ -31,5 +31,5 @@ workflows:
     jobs:
       - checkoutEtTests
       - integrationFrontend:
-        requires:
-          - checkoutEtTests
+          requires:
+            - checkoutEtTests
