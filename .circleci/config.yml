@@ -1,12 +1,13 @@
 version: 2.1
-
+orbs:
+  node: circleci/node@2.9
 jobs:
-  checkoutEtTests:
-    docker:
-      - image: cimg/node:22.9
+  test:
+    executor:
+      name: node/default
     steps:
       - run:
-          name: cloner, installer dependances et t
+          name: cloner, installer dependances et tester
           command: |
             git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
             cd 3w5-h25-L01-backend
