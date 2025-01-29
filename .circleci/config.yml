@@ -17,8 +17,7 @@ jobs:
             npm install
       - run:
           name: Exécuter les tests backend
-          command: |
-            cd 3w5-h25-L01-backend
+          command:
             npm run test
 
 workflows:
