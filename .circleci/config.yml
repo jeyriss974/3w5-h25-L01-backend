@@ -33,7 +33,7 @@ jobs:
             npm install
             npm run build
       - run:
-          command:
+          command: |
             cd 3w5-h25-L01-backend
             mkdir -p public
       - run:
@@ -41,7 +41,7 @@ jobs:
             cp -r ../3w5-h25-L01-frontend/build/* ./public/
 
       - persist_to_workspace:
-          root: /home/circleci/project
+          root: project
           paths:
             - 3w5-h25-L01-backend/public
 workflows:
