@@ -39,7 +39,7 @@ jobs:
             cp -r ../3w5-h25-L01-frontend/build/* ./public/
 
       - persist_to_workspace:
-          root: project
+          root: .
           paths:
             - 3w5-h25-L01-backend/public
 workflows:
