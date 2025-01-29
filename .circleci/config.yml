@@ -42,6 +42,17 @@ jobs:
           root: .
           paths:
             - 3w5-h25-L01-backend/public
+
+  deploiement:
+    executor:
+      name: node/default
+      tag: "22.9"
+    steps:
+      - run:
+          command: |
+            cd .
+            ls -Rl
+
 workflows:
   labo_01:
     jobs:
@@ -49,3 +60,6 @@ workflows:
       - integrationFrontend:
           requires:
             - checkoutEtTests
+      - deploiement:
+          requires:
+            - integrationFrontend
