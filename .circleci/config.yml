@@ -12,8 +12,7 @@ jobs:
       - checkout
       - run:
           name: Installer les dépendances backend
-          command: |
-            cd 3w5-h25-L01-backend 
+          command:
             npm install
       - run:
           name: Exécuter les tests backend
