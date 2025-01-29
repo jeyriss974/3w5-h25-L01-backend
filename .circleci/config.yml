@@ -7,7 +7,7 @@ jobs:
   checkoutEtTests:
     executor:
       name: node/default 
-      tag: '16.13'
+      tag: '22.9'
     steps:
       - checkout
       - run:
