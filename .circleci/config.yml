@@ -8,10 +8,12 @@ jobs:
       tag: "22.9"
     steps:
       - run:
-          command: git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
-      - node/install-packages
-      - run:
-          command: npm run test
+          command: |
+            git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
+            cd 3w5-h25-L01-backend
+            npm install
+            npm run test
+
   integrationFrontend:
     executor:
       name: node/default
