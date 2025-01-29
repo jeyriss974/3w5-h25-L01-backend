@@ -8,9 +8,13 @@ jobs:
       tag: "22.9"
     steps:
       - run:
-          command: |
+          command:
             git clone https://github.com/jeyriss974/3w5-h25-L01-backend.git
+      - run:
+          command:
             cd 3w5-h25-L01-backend
+      - run:
+          command:
             npm install
             npm run test
 
